@@ -117,7 +117,6 @@ h1 {
 .textSection {
   flex: 0 0 50%;
   box-sizing: border-box;
-  padding: 2rem;
 }
 
 .imageSection img {
@@ -127,8 +126,13 @@ h1 {
   vertical-align: middle;
 }
 
+.imageSection {
+  padding-left: 2rem;
+}
+
 .textSection {
   line-height: 150%;
+  padding-right: 2rem;
 }
 
 .textSection p {
@@ -141,6 +145,11 @@ h1 {
   margin-bottom: 1rem;
 }
 
+.textSection li {
+  list-style-position: inside;
+  list-style-type:"- ";
+}
+
 
 /* CTA forside */
 
@@ -149,7 +158,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   padding: 2rem;
   margin: 0 auto;
   line-height: 150%;
@@ -181,15 +189,21 @@ button {
 .contactCard {
   box-sizing: border-box;
   max-width: 345px;
+  padding: 2rem;
 }
 
-/* .contactCard img {
-  
+.contactCard img {
+  width: 100%;
 
-} */
+}
 
 
-
+article {
+  width: 60ch;
+}
+article * {
+  margin: 1rem;
+}
 
 
 
@@ -250,3 +264,37 @@ gmp-map {
 }
 
 
+/* Slider */
+
+.gallery-container {
+          position: relative;
+          width: 100%;
+          max-width: 500px;
+          margin: auto;
+          overflow: hidden;
+        }
+.gallery-item {
+          width: 100%;
+          max-height: 300px;
+          display: none;
+          transition: opacity 0.5s;
+        }
+        .gallery-item.active {
+          display: block;
+        }
+        .gallery-prev, .gallery-next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          
+          border: none;
+          font-size: 2rem;
+          cursor: pointer;
+          z-index: 2;
+          opacity: 0.7;
+          padding: 0 10px;
+          color: black;
+        }
+        .gallery-prev { left: 10px; }
+        .gallery-next { right: 10px; }
+        .gallery { position: relative; }
