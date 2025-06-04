@@ -1,20 +1,29 @@
 const items = document.querySelectorAll('.gallery-item');
-        let current = 0;
+let current = 0;
 
-        function showItem(index) {
-          items.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-            img.style.display = i === index ? 'block' : 'none';
-          });
-        }
+function updateCarousel() {
+  items.forEach((img, i) => {
+    img.className = 'gallery-item'; // reset all
+    img.style.display = 'none';
+  });
 
-        document.querySelector('.gallery-prev').onclick = () => {
-          current = (current - 1 + items.length) % items.length;
-          showItem(current);
-        };
-        document.querySelector('.gallery-next').onclick = () => {
-          current = (current + 1) % items.length;
-          showItem(current);
-        };
+  const getIndex = i => (i + items.length) % items.length;
 
-        showItem(current);
+  [getIndex(current - 1), current, getIndex(current + 1)].forEach((i, pos) => {
+    const classMap = ['prev', 'active', 'next'];
+    items[i].classList.add(classMap[pos]);
+    items[i].style.display = 'block';
+  });
+}
+
+document.querySelector('.gallery-prev').onclick = () => {
+  current = (current - 1 + items.length) % items.length;
+  updateCarousel();
+};
+
+document.querySelector('.gallery-next').onclick = () => {
+  current = (current + 1) % items.length;
+  updateCarousel();
+};
+
+updateCarousel();

@@ -266,35 +266,65 @@ gmp-map {
 
 /* Slider */
 
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* You can increase this for larger carousels */
+  height: 400px; /* Or auto if you want dynamic height */
+  margin: auto;
+  overflow: hidden;
+}
+
 .gallery-container {
-          position: relative;
-          width: 100%;
-          max-width: 500px;
-          margin: auto;
-          overflow: hidden;
-        }
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .gallery-item {
-          width: 100%;
-          max-height: 300px;
-          display: none;
-          transition: opacity 0.5s;
-        }
-        .gallery-item.active {
-          display: block;
-        }
-        .gallery-prev, .gallery-next {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          
-          border: none;
-          font-size: 2rem;
-          cursor: pointer;
-          z-index: 2;
-          opacity: 0.7;
-          padding: 0 10px;
-          color: black;
-        }
-        .gallery-prev { left: 10px; }
-        .gallery-next { right: 10px; }
-        .gallery { position: relative; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  max-height: 400px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery-item.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+.gallery-item.prev {
+  opacity: 0.7;
+  transform: translate(-150%, -50%) scale(0.9);
+  z-index: 2;
+}
+
+.gallery-item.next {
+  opacity: 0.7;
+  transform: translate(50%, -50%) scale(0.9);
+  z-index: 2;
+}
+
+.gallery-prev,
+.gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  color: black;
+  opacity: 0.7;
+}
+
+.gallery-prev { left: 10px; }
+.gallery-next { right: 10px; }
