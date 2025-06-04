@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #427ff9;
+  --hoverCTA: #264D99;
+  --secondary: #F8C342;
+  --section: #EAF1FF;
+  --text: #1F1F1F;
+  --primaryBackground: #F5F5F5;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-bold: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
+}
+
+main {
+  margin: 5rem;
+}
+
+
+/* nav */
+
+nav {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary);
+}
+
+li:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+ 
+}
+
+
+
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/*  */
+/* Billede og tekst boks */
+/*  */
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper * {
+  margin: 0 0 1rem 0;
+}
+
+.imageSection,
+.textSection {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.imageSection img {
+  width: 100%;
+  /* max-width: 466px;  */
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.textSection {
+  line-height: 150%;
+}
+
+.textSection p {
+  font-size: 16px;
+
+  
+}
+.textSection h2 {
+  font-size: 32px;
+  margin-bottom: 1rem;
+}
+
+
+/* CTA forside */
+
+.wrapperCTA {
+  max-width: 710px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+  line-height: 150%;
+}
+
+.wrapperCTA * {
+  margin: 1rem;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.bestyrelseWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+
+}
+
+.contactCard {
+  box-sizing: border-box;
+  max-width: 345px;
+}
+
+/* .contactCard img {
+  
+
+} */
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+  padding: 2rem 5rem 2rem 5rem;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.footer-left p {
+  line-height: 1.5;
+}
+.footer-left img {
+  width: 142px;
+  height: auto;
+}
+
+.footer-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-right i {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  
+}
+
+/* googlemaps */
+
+gmp-map {
+  height: 500px; 
+  width: 100%;
+}
+
+
