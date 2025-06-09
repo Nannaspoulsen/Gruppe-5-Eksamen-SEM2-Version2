@@ -20,8 +20,19 @@ html {
   --font-family-bold: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
 }
 
+header {
+  padding-top: 100px;
+}
+
 main {
   margin: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-bold);
+  color: var(--hoverCTA);
+  font-size: 46px;
+  font-weight: bold;
 }
 
 
@@ -33,6 +44,10 @@ nav {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -107,6 +122,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 3rem;
 }
 
 .wrapper * {
@@ -141,8 +157,8 @@ h1 {
   
 }
 .textSection h2 {
-  font-size: 32px;
   margin-bottom: 1rem;
+  line-height: 150%;
 }
 
 .textSection li {
@@ -154,18 +170,43 @@ h1 {
 /* CTA forside */
 
 .wrapperCTA {
-  max-width: 710px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  margin: 0 auto;
   line-height: 150%;
+  gap: 2rem;
+}
+.wrapperCTA * {
+  margin: 0 0 1rem 0;
 }
 
-.wrapperCTA * {
-  margin: 1rem;
+.textSectionTwo {
+  max-width: 80ch;
 }
+
+.iconSection {
+  display: flex;
+  flex-direction: column;
+  color: var(--hoverCTA);
+}
+
+.iconSection .icon-text {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+.iconSection i {
+  font-size: 2rem;
+  color: var(--hoverCTA);
+}
+
+
+
+
+
+
+/* Knap */
 
 button {
   background-color: var(--primary);
@@ -178,6 +219,8 @@ button {
   cursor: pointer;
 }
 
+
+/* ContactCards */
 
 .bestyrelseWrapper {
   display: grid;
@@ -269,8 +312,8 @@ gmp-map {
 .gallery {
   position: relative;
   width: 100%;
-  max-width: 700px; /* You can increase this for larger carousels */
-  height: 400px; /* Or auto if you want dynamic height */
+  max-width: 700px; 
+  height: 400px; 
   margin: auto;
   overflow: hidden;
 }
@@ -287,11 +330,9 @@ gmp-map {
   left: 50%;
   max-width: 400px;
   max-height: 400px;
-  opacity: 0;
   transform: translate(-50%, -50%) scale(0.8);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.2s ease, opacity 0.9s ease;
   z-index: 1;
-  pointer-events: none;
 }
 
 .gallery-item.active {
@@ -302,29 +343,21 @@ gmp-map {
 
 .gallery-item.prev {
   opacity: 0.7;
-  transform: translate(-150%, -50%) scale(0.9);
+  transform: translate(-150%, -50%) scale(0.6);
   z-index: 2;
 }
 
 .gallery-item.next {
   opacity: 0.7;
-  transform: translate(50%, -50%) scale(0.9);
+  transform: translate(50%, -50%) scale(0.6);
   z-index: 2;
+
 }
 
-.gallery-prev,
-.gallery-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
+.gallery-buttons {
   font-size: 2rem;
   cursor: pointer;
-  z-index: 10;
-  color: black;
-  opacity: 0.7;
+  text-align: center;
 }
 
-.gallery-prev { left: 10px; }
-.gallery-next { right: 10px; }
+

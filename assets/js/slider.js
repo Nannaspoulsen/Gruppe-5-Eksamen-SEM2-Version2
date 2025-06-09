@@ -3,16 +3,14 @@ let current = 0;
 
 function updateCarousel() {
   items.forEach((img, i) => {
-    img.className = 'gallery-item'; // reset all
-    img.style.display = 'none';
+    img.classList.remove('prev', 'active', 'next');
+    img.hidden = true;
   });
 
   const getIndex = i => (i + items.length) % items.length;
-
   [getIndex(current - 1), current, getIndex(current + 1)].forEach((i, pos) => {
-    const classMap = ['prev', 'active', 'next'];
-    items[i].classList.add(classMap[pos]);
-    items[i].style.display = 'block';
+    items[i].classList.add(['prev', 'active', 'next'][pos]);
+    items[i].hidden = false;
   });
 }
 
