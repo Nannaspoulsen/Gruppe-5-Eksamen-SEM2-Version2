@@ -47,7 +47,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 99;
 }
 
 nav ul {
@@ -79,6 +79,20 @@ nav a {
 
 li:hover .dropdown-content {
   display: block;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 2rem;
+}
+
+.bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 9px auto;
+  background-color: white;
 }
 
 
@@ -209,7 +223,7 @@ h1 {
 /* Knap */
 
 button {
-  background-color: var(--primary);
+  background-color: #80AAFF;
   color: white;
   font-weight: bold;
   padding: 1rem 1rem;
@@ -361,3 +375,270 @@ gmp-map {
 }
 
 
+.quoteWrapper{
+  text-align: center;
+  max-width: 40ch;
+  margin: auto;
+  color: var(--hoverCTA);
+}
+
+
+.recordWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 8rem;
+  row-gap: 3rem;
+  padding-top: 2rem;
+  width: max-content;
+  margin: auto;
+}
+
+
+
+.recordWrapper .record {
+  background-color: #80AAFF;
+  padding: 2rem;
+  max-width: 362px;
+  border-radius: 8px;
+  color: white;
+  
+}
+
+.recordWrapper .record h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.godStilWrapper {
+  margin: auto;
+  max-width: 80ch;
+}
+.godStilWrapper>* {
+  margin: 1rem;
+  list-style-position: inside;
+}
+
+
+
+/* Kontigent */
+.prisWrapper {
+  background-color: #EAF1FF;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  max-width: 953px;
+  margin: auto;
+}
+
+
+.priser {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+  gap: 4rem;
+  margin-top: 2rem;
+  list-style: inside;
+}
+
+.priser p {
+  text-align: center;
+  font-size: 32px;
+}
+
+.prisInfo {
+  max-width: 570px; 
+  margin: 2rem auto; 
+  text-align: center; 
+}
+
+.prisInfo button {
+  max-width: 400px;
+}
+
+.prisInfo * {
+  margin-bottom: 1rem;
+}
+
+.prisInfo p:nth-of-type(2) {
+  text-align: left;
+}
+
+
+
+
+/* Hold kort */
+
+.holdCardWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+
+.holdCard {
+  max-width: 100%;
+  background-color: #EAF1FF;
+  border-radius: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.holdCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  padding: 0;
+}
+
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: bold;
+  
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardContent button {
+  max-width: 200px;
+  font-size: 16px;
+}
+
+
+
+
+
+/* Media */
+
+
+@media (max-width: 800px) {
+  main {
+    margin: 2rem;
+  }
+
+  .wrapper,
+  .wrapperCTA {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .imageSection,
+  .textSection {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .footer-top {
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .bestyrelseWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .holdCardWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .recordWrapper {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .priser {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 120px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-links.active{
+    left: 0;
+  }
+
+  .gallery {
+    max-width: 100%;
+    height: 220px;
+  }
+
+  .gallery-item {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .footer-left img {
+    width: 100px;
+  }
+
+  .footer-right i {
+    font-size: 2.5rem;
+  }
+
+  .bestyrelseWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .prisWrapper {
+    padding: 1rem;
+  }
+
+  
+
+  
+}
