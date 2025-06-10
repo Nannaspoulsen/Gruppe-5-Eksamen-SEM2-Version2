@@ -18,6 +18,11 @@
 
 
   function createContact(contacts) {
+    const bestyrelsesRoller = ["Formand", "Kasserer", "Bestyrelsesmedlem"];
+    const bestyrelsenEl = document.querySelector("#bestyrelsen");
+    const traenereEl = document.querySelector("#traenere");
+
+
     contacts.forEach(contact => {
       const contactEl = document.createElement("section");
       contactEl.classList.add("contactCard");
@@ -26,16 +31,26 @@
       const role = contact.acf?.rolle || "Ukendt rolle";
       const name = contact.acf?.navn || "Ukendt navn";
       const email = contact.acf?.email || "";
-      const phone = contact.acf?.telefon || "";
+      const phone = contact.acf?.telefonnummer || "";
 
       contactEl.innerHTML = `
         <img src="${imageUrl}" alt="${name}">
-        <h3>${role}</h3>
-        <p>${name}</p>
-        <p>Email: ${email}</p>
+        <h3>${role.toUpperCase()}</h3>
+        <p>${name.toUpperCase()}</p>
+        <p>Email: ${email.toUpperCase()}</p>
         <p>Telefon: ${phone}</p>
       `;
 
-      bestyrelseWrapperEl.appendChild(contactEl);
+      if(role === "Formand" || role === "Kasserer") {
+        bestyrelsenEl.insertBefore(contactEl, bestyrelsenEl.firstChild);
+      }
+
+      else if (bestyrelsesRoller.includes(role)) {
+        bestyrelsenEl.appendChild(contactEl);
+      }
+      else {
+        traenereEl.appendChild(contactEl);
+      }
+      
     });
   }
