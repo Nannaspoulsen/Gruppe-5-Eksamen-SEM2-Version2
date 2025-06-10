@@ -1,7 +1,652 @@
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
-body{
-    margin: 0;
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #427ff9;
+  --hoverCTA: #264D99;
+  --secondary: #F8C342;
+  --section: #EAF1FF;
+  --text: #1F1F1F;
+  --primaryBackground: #F5F5F5;
+  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-family-bold: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
+}
+
+header {
+  padding-top: 100px;
+}
+
+main {
+  margin: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-bold);
+  color: var(--hoverCTA);
+  font-size: 46px;
+  font-weight: bold;
+}
+
+
+/* nav */
+
+nav {
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary);
+}
+
+li:hover .dropdown-content {
+  display: block;
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  margin: 2rem;
+}
+
+.bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 9px auto;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero */
+.hero img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+ 
+}
+
+
+
+
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+/*  */
+/* Billede og tekst boks */
+/*  */
+
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+}
+
+.wrapper * {
+  margin: 0 0 1rem 0;
+}
+
+.imageSection,
+.textSection {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+
+.imageSection img {
+  width: 100%;
+  /* max-width: 466px;  */
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+.imageSection {
+  padding-left: 2rem;
+}
+
+.textSection {
+  line-height: 150%;
+  padding-right: 2rem;
+}
+
+.textSection p {
+  font-size: 16px;
+
+  
+}
+.textSection h2 {
+  margin-bottom: 1rem;
+  line-height: 150%;
+}
+
+.textSection li {
+  list-style-position: inside;
+  list-style-type:"- ";
+}
+
+
+/* CTA forside */
+
+.wrapperCTA {
+  display: flex;
+  line-height: 150%;
+  gap: 2rem;
+}
+.wrapperCTA * {
+  margin: 0 0 1rem 0;
+}
+
+.textSectionTwo {
+  max-width: 80ch;
+}
+
+.iconSection {
+  display: flex;
+  flex-direction: column;
+  color: var(--hoverCTA);
+}
+
+.iconSection .icon-text {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+}
+
+.iconSection i {
+  font-size: 2rem;
+  color: var(--hoverCTA);
+}
+
+
+
+
+
+
+/* Knap */
+
+button {
+  background-color: #80AAFF;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* ContactCards */
+
+.bestyrelseWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+
+}
+
+.contactCard {
+  box-sizing: border-box;
+  max-width: 345px;
+  padding: 2rem;
+}
+
+.contactCard img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover ;
+  
+
+}
+
+.contactCard h3 {
+  font-size: 24px;
+  color: var(--text);
+}
+
+
+article {
+  width: 60ch;
+}
+article * {
+  margin: 1rem;
+}
+
+
+
+
+
+/* footer */
+footer {
+  padding: 2rem 5rem 2rem 5rem;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.footer-left p {
+  line-height: 1.5;
+}
+.footer-left img {
+  width: 142px;
+  height: auto;
+}
+
+.footer-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-right i {
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  
+}
+
+/* googlemaps */
+
+gmp-map {
+  height: 500px; 
+  width: 100%;
+}
+
+
+/* Slider */
+
+.gallery {
+  position: relative;
+  width: 100%;
+  max-width: 700px; 
+  height: 400px; 
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  max-height: 400px;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 0.2s ease, opacity 0.9s ease;
+  z-index: 1;
+}
+
+.gallery-item.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+}
+
+.gallery-item.prev {
+  opacity: 0.7;
+  transform: translate(-150%, -50%) scale(0.6);
+  z-index: 2;
+}
+
+.gallery-item.next {
+  opacity: 0.7;
+  transform: translate(50%, -50%) scale(0.6);
+  z-index: 2;
+
+}
+
+.gallery-buttons {
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.quoteWrapper{
+  text-align: center;
+  max-width: 40ch;
+  margin: auto;
+  color: var(--hoverCTA);
+}
+
+
+.recordWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 8rem;
+  row-gap: 3rem;
+  padding-top: 2rem;
+  width: max-content;
+  margin: auto;
+}
+
+
+
+.recordWrapper .record {
+  background-color: #80AAFF;
+  padding: 2rem;
+  max-width: 362px;
+  border-radius: 8px;
+  color: white;
+  
+}
+
+.recordWrapper .record h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.godStilWrapper {
+  margin: auto;
+  max-width: 80ch;
+}
+.godStilWrapper>* {
+  margin: 1rem;
+  list-style-position: inside;
+}
+
+
+
+/* Kontigent */
+.prisWrapper {
+  background-color: #EAF1FF;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  max-width: 953px;
+  margin: auto;
+}
+
+
+.priser {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+  gap: 4rem;
+  margin-top: 2rem;
+  list-style: inside;
+}
+
+.priser p {
+  text-align: center;
+  font-size: 32px;
+}
+
+.prisInfo {
+  max-width: 570px; 
+  margin: 2rem auto; 
+  text-align: center; 
+}
+
+.prisInfo button {
+  max-width: 400px;
+}
+
+.prisInfo * {
+  margin-bottom: 1rem;
+}
+
+.prisInfo p:nth-of-type(2) {
+  text-align: left;
+}
+
+
+
+
+/* Hold kort */
+
+.holdCardWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+
+
+.holdCard {
+  max-width: 100%;
+  background-color: #EAF1FF;
+  border-radius: 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.holdCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  padding: 0;
+}
+
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+  font-weight: bold;
+  
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardContent button {
+  max-width: 200px;
+  font-size: 16px;
+}
+
+
+
+
+
+/* Media */
+
+
+@media (max-width: 800px) {
+  main {
+    margin: 2rem;
+  }
+
+  .wrapper,
+  .wrapperCTA {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+  }
+
+  .imageSection,
+  .textSection {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .footer-top {
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .bestyrelseWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .holdCardWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .recordWrapper {
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+
+  .priser {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  main {
+    margin: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 120px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--primary);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-links.active{
+    left: 0;
+  }
+
+  .gallery {
+    max-width: 100%;
+    height: 220px;
+  }
+
+  .gallery-item {
+    max-width: 180px;
+    max-height: 180px;
+  }
+
+  .footer-left img {
+    width: 100px;
+  }
+
+  .footer-right i {
+    font-size: 2.5rem;
+  }
+
+  .bestyrelseWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .prisWrapper {
+    padding: 1rem;
+  }
+
+  
+
+  
 }
