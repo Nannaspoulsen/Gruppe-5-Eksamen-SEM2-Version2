@@ -69,6 +69,11 @@ nav a {
   display: block;
 }
 
+.logo img {
+  height: 75px;
+  padding: 5px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -547,7 +552,7 @@ gmp-map {
   backdrop-filter: blur(10px);
   margin: 0 auto;
   position: fixed;
-  top:110px;
+  top:90px;
   border-radius: 0.5rem;
   border: 2px solid white;
 }
