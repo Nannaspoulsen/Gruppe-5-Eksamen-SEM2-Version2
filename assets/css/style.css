@@ -69,6 +69,11 @@ nav a {
   display: block;
 }
 
+.logo img {
+  height: 75px;
+  padding: 5px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -229,10 +234,15 @@ button {
   padding: 1rem 1rem;
   border: none;
   border-radius: 6px;
-  font-size: 24px;
+  font-size: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
+button:hover {
+  transform: scale(1.1);
+}
 
 /* ContactCards */
 
@@ -537,8 +547,63 @@ gmp-map {
 }
 
 
+.modalDialog {
+  max-width: 100%;
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  position: fixed;
+  top:90px;
+  border-radius: 0.5rem;
+  border: 2px solid white;
+}
 
+.modalDialog img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 0.5rem;
+}
 
+.modalDialog .closeBtn {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+.modalContent {
+  padding: 5px 20px;
+  width: 50vw;
+}
+
+.modalContent p {
+  padding-block: 5px;
+}
+
+.modalContent h3 {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.modalContent .infoItem {
+  padding-bottom: 3px;
+}
+
+.modalButton {
+  background-color: #80AAFF;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  float: right;
+  text-decoration: none;
+  margin-top: 2px;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(2px);
+}
 
 /* Media */
 
