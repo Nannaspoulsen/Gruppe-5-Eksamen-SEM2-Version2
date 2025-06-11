@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <a href="./index.html" class="nav-icon"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
+        <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
         <ul class="nav-links">
           <li class="nav-item"><a href="./index.html">HJEM</a></li>
           <li class="nav-item">
@@ -33,11 +33,12 @@
           <li class="nav-item"><a href="./kontakt.html">KONTAKT</a></li>
         </ul>
 
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+        <label for="menu_toggle" class="hamburger">
+          <input type="checkbox" id="menu_toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </nav>
     </header>
     <div class="hero">
