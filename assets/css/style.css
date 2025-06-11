@@ -47,7 +47,7 @@ nav {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 99;
+  z-index: 999;
 }
 
 nav ul {
@@ -64,7 +64,7 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: .75rem;
   font-size: 24px;
   display: block;
 }
@@ -92,13 +92,13 @@ li:hover .dropdown-content {
   margin: 2rem;
 }
 
-.bar {
+/* .bar {
   display: block;
   width: 40px;
   height: 4px;
   margin: 9px auto;
   background-color: white;
-}
+} */
 
 
 
@@ -663,26 +663,109 @@ dialog::backdrop {
 
   .hamburger {
     display: block;
+    z-index: 1;
+    top: 2px;
+    right: 2px;
   }
+
+.hamburger input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  width: 40px;
+  z-index: 2;
+}
+
+.hamburger span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background-color: var(--primaryBackground);
+  border-radius: 3px;
+  z-index: 1;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      transform-origin: 4px 0px;
+}
+.hamburger input:checked~span {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, 0);
+  background: var(--primaryBackground);
+}
+
+.hamburger input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.hamburger input:checked~span:nth-last-child(2) {
+  transform: rotate(45deg) translate(-8px, -10px);
+}
+
+.hamburger span:first-child {
+  transform-origin: 0% 0%;
+}
+.hamburger span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+.dropdown input {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: unset;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.dropdown-content a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+.dropdown {
+  width: 100%;
+}
+.dropdown-toggle {
+  display: block;
+  width: 100%;
+  padding: 16px 0;
+  text-align: center;
+}
+
+#dropdown-toggle:checked+label+.dropdown-content {
+  display: block;
+}
 
   .nav-links {
     position: fixed;
-    left: -100%;
-    top: 120px;
+    top: -100%;
     gap: 0;
     flex-direction: column;
+    align-items: center;
     background-color: var(--primary);
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.5s ease-in-out;
+    height: 90vh;
   }
 
   .nav-item {
-    margin: 16px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .nav-item a {
+    display: block;
+    padding: 16px;
+    width: 100%;
   }
 
   .nav-links.active{
-    left: 0;
+    top: 100px;
   }
 
   .gallery {
