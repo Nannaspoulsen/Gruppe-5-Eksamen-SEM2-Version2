@@ -715,6 +715,10 @@ dialog::backdrop {
 
 .dropdown-content {
   display: none;
+  position: unset;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
 }
 
 .dropdown-content a {
