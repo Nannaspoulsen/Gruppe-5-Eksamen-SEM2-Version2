@@ -1,6 +1,6 @@
   const holdCardWrapperEl = document.querySelector(".holdCardWrapper");
   const domain = "https://antonstest.antonshjemmeside.dk/";
-  const postsEndpoint = "wp-json/wp/v2/kontaktperson";
+  const postsEndpoint = "wp-json/wp/v2/posts";
   const getRealImageUrls = "?acf_format=standard";
   const authEndpoint = "wp-json/jwt-auth/v1/token";
   const fullImage = "?acf_format=standard&per_page=100";   
@@ -17,7 +17,7 @@
     .catch(error => console.log("Der er sket en fejl:", error));
 
 
-  function createContact(contacts) {
+  function createJuniorCard(contacts) {
     
 
 
@@ -39,16 +39,6 @@
         <p>Telefon: ${phone}</p>
       `;
 
-      if(role === "Formand" || role === "Kasserer") {
-        bestyrelsenEl.insertBefore(contactEl, bestyrelsenEl.firstChild);
-      }
-
-      else if (bestyrelsesRoller.includes(role)) {
-        bestyrelsenEl.appendChild(contactEl);
-      }
-      else {
-        traenereEl.appendChild(contactEl);
-      }
       
     });
   }
