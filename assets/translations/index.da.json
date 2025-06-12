@@ -4,11 +4,7 @@
   "nav.junior": "JUNIOR TRAINING",
   "nav.senior": "SENIOR TRAINING",
   "nav.signup": "SIGN UP",
-  "nav.info": "PRACTICAL",
-  "nav.about": "ABOUT US",
-  "nav.contact": "CONTACT" 
-   }
-
-
-
-
+  "nav.info": "PRACTICAL INFO",
+  "nav.about": "ABOUT THE CLUB",
+  "nav.contact": "CONTACT"
+}
