@@ -42,7 +42,7 @@ nav {
   background-color: var(--primary);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -278,6 +278,12 @@ button:hover {
   transform: scale(1.1);
 }
 
+.lang-btn {
+  padding: 0.5rem;
+  box-shadow: none;
+  margin-inline: 0.25rem;
+  position: relative;
+}
 /* ContactCards */
 
 .bestyrelseWrapper {
@@ -376,7 +382,7 @@ gmp-map {
 .gallery {
   position: relative;
   width: 100%;
-  max-width: 700px; 
+  max-width: 1000px; 
   height: 400px; 
   margin: auto;
   overflow: hidden;
@@ -392,8 +398,8 @@ gmp-map {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
   transform: translate(-50%, -50%) scale(0.8);
   transition: transform 0.2s ease, opacity 0.9s ease;
   z-index: 1;
@@ -587,7 +593,7 @@ gmp-map {
   backdrop-filter: blur(10px);
   margin: 0 auto;
   position: fixed;
-  top:90px;
+  top: 1rem;
   border-radius: 0.5rem;
   border: 2px solid white;
 }
@@ -759,13 +765,13 @@ dialog::backdrop {
   display: none;
   position: unset;
   font-size: 20px;
+  justify-content: center;
 }
 
 .dropdown-content a {
   display: block;
   width: 100%;
   padding: 10px 0;
-  text-align: center;
 }
 .dropdown {
   width: 100%;
@@ -803,6 +809,10 @@ dialog::backdrop {
     padding: 16px;
     margin: 0 auto;
   }
+li:hover .dropdown-content {
+  display: block;
+  width: 100%;
+}
 
   .nav-links.active{
     top: 100px;

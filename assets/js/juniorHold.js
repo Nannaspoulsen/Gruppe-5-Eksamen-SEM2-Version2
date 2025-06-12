@@ -4,6 +4,7 @@ const postsEndpoint = "wp-json/wp/v2/posts";
 const getRealImageUrls = "?acf_format=standard";
 const authEndpoint = "wp-json/jwt-auth/v1/token";
 const fullImage = "?acf_format=standard&per_page=100";
+const lang = localStorage.getItem("lang") || "da";
 
 const url = domain + postsEndpoint + fullImage;
 
@@ -35,10 +36,14 @@ fetch(url)
   .catch((error) => console.log("Der er sket en fejl:", error));
 
   function createJuniorCard(contacts) {
-    // Finder ud af hvilket sprog brugeren har valgt – standard er dansk ("da")
-  const lang = localStorage.getItem("lang") || "da";
-  // Vælger det rigtige kategori-ID alt efter sprog (bruges til at filtrere)
-  const targetCategoryId = lang === "da" ? 9 : 11; 
+
+  let targetCategoryId
+  
+  if (lang === "da") {
+    targetCategoryId = 9;
+  } else if (lang === "en") {
+    targetCategoryId = 11; 
+  }
 
   contacts.forEach(contact => {
   // Hvis kontaktpersonen ikke hører til den valgte kategori, springes den over
@@ -92,7 +97,7 @@ fetch(url)
     <p>${fullDescription}</p>
   </div>
 </details>
-      <button data-dialog="dialog-${slug}" class="openDialogBtn">Læs mere om holdet</button>
+      <button data-dialog="dialog-${slug}" class="openDialogBtn" data-i18n="training.btn">Læs mere om holdet</button>
     </div>
   `;
   // Tilføjer kortet til siden
@@ -118,7 +123,7 @@ const dialogEl = document.createElement("dialog");
           <span>Trænere: ${coaches}</span>
         </div>
         <p>${fullDescription}</p>
-        <a href="./kontakt.html" class="modalButton">Kontakt træneren</a>
+        <a href="./kontakt.html" class="modalButton" data-i18n="modal.btn">Kontakt træneren</a>
       </div>
     </div>
   `;
@@ -136,6 +141,8 @@ const dialogEl = document.createElement("dialog");
   closeBtn.addEventListener("click", () => dialogEl.close());
 
   });
+
+  changeLanguage(lang);
 }
 
 

@@ -9,19 +9,20 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
     const lang = btn.getAttribute("data-lang");
     // Skifter sproget på siden
     changeLanguage(lang);
+    window.location.reload();
   });
 });
 
 
 // Funktion der skifter sprog og gemmer det i localStorage
 async function changeLanguage(lang) {
-  const selectedLang = lang || "da"; 
+  const selectedLang = lang || "da";
   const currentLang = localStorage.getItem("lang");
   localStorage.setItem("lang", selectedLang);
 
 // Hvis sproget allerede er dansk og ikke ændret, så gør ingenting
   if (selectedLang === currentLang && selectedLang === "da") {
-    return
+    return;
   }
    // Hvis brugeren vælger dansk, genindlæses siden
    if (selectedLang === "da") {
@@ -32,13 +33,26 @@ async function changeLanguage(lang) {
   const currentPage = window.location.pathname.split("/").pop().split(".")[0];
 
   try {
-    // Henter oversættelser for fælles elementer og for den specifikke side
-    const sharedRes = await fetch(`./assets/translations/shared.${selectedLang}.json`);
-    const pageRes = await fetch(`./assets/translations/${currentPage}.${selectedLang}.json`);
-  // Konverterer JSON
+    const sharedRes = await fetch(
+      `./assets/translations/shared.${selectedLang}.json`
+    );
     const sharedTranslations = await sharedRes.json();
-    const pageTranslations = await pageRes.json();
- // Slår de to sæt oversættelser sammen
+
+    let pageTranslations = {};
+
+    try {
+      const pageRes = await fetch(
+        `./assets/translations/${currentPage}.${selectedLang}.json`
+      );
+      if (!pageRes.ok)
+        throw new Error(
+          `No translation file found for ${currentPage}.${selectedLang}`
+        );
+      pageTranslations = await pageRes.json();
+    } catch (innerErr) {
+      console.warn(innerErr.message);
+    }
+
     const translations = { ...sharedTranslations, ...pageTranslations };
 // Går alle elementer med data-i18n igennem og sætter teksten ud fra oversættelserne. data-i18n står for "data-internationalization". det bruges til at markere, hvilke elementer der skal oversættes.
     document.querySelectorAll("[data-i18n]").forEach((el) => {

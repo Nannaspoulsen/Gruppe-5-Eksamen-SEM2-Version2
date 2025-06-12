@@ -1,13 +1,15 @@
 {
   "nav.home": "HOME",
-  "nav.training": "TRAINING ▼",
+  "nav.training": "TEAMS ▼",
   "nav.junior": "JUNIOR TRAINING",
   "nav.senior": "SENIOR TRAINING",
   "nav.signup": "SIGN UP",
   "nav.info": "PRACTICAL",
   "nav.about": "ABOUT US",
-  "nav.contact": "CONTACT" 
-   }
+  "nav.contact": "CONTACT",
+  "training.btn": "Read about the team",
+  "modal.btn": "Contact trainer"
+  }
 
 
 

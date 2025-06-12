@@ -15,20 +15,16 @@
       referrerpolicy="no-referrer"
     />
     <script src="./assets/js/slider.js" defer></script>
-    <script src="./assets/js/translation.js"></script>
+    <script src="./assets/js/translation.js" defer></script>
   </head>
   <body>
   <header>
     <nav class="navbar">
       <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
-      <div>
-        <button class="lang-btn" data-lang="da">Dansk</button>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
       <ul class="nav-links">
         <li class="nav-item activePage"><a href="./index.html" data-i18n="nav.home">HJEM</a></li>
         <li class="nav-item">
-          <a class="drop" href="./traening.html" data-i18n="nav.training">TRÆNING ▼</a>
+          <a class="drop" href="./traening.html" data-i18n="nav.training">HOLD ▼</a>
           <ul class="dropdown-content">
             <li><a href="./traeningJunior.html" data-i18n="nav.junior">JUNIOR TRÆNING</a></li>
             <li><a href="./traeningSenior.html" data-i18n="nav.senior">SENIOR TRÆNING</a></li>
@@ -40,6 +36,10 @@
         <li class="nav-item"><a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a></li>
       </ul>
   
+      <div>
+        <button class="lang-btn" data-lang="da">Dansk</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
       <label for="menu_toggle" class="hamburger">
         <input type="checkbox" id="menu_toggle">
         <span></span>
@@ -59,20 +59,20 @@
     <main>
       <div class="wrapper">
         <div class="textSection">
-          <h2>Danmarks første floorballklub</h2>
-          <p>
+          <h2 data-i18n="h2.DKfirst">Danmarks første floorballklub</h2>
+          <p data-i18n="p.section1">
             Aalborg Flyers blev stiftet i 1989 som den første floorballklub i
             Danmark - og vi skrev historie allerede fra start. I 1992 tog vi det
             allerførste danske mesterskab nogensinde, da vi vandt alle kampe og
             slog Frederikshavn Bulldogs i finalen med 9-1.
           </p>
-          <p>
+          <p data-i18n="p.section2">
             Siden da har klubben været fast inventar i dansk floorball - både i
             toppen og i de lavere rækker. Vi har kæmpet os tilbage efter
             modgang, rykket op og ned, og hver gang er vi kommet stærkere igen -
             takket være et stærkt sammenhold og en passion for sporten.
           </p>
-          <p>
+          <p data-i18n="p.section3">
             Vi har både haft succes med juniorhold, damehold og herrehold, og
             mange unge spillere har fået deres første floorballoplevelser her
             hos os. I dag består Aalborg Flyers af en stærk blanding af nye og
@@ -91,8 +91,8 @@
 
       <div class="wrapper">
         <div class="textSection">
-          <h2>Klubbens Hall of Fame</h2>
-          <p>
+          <h2 data-i18n="h2.HallofFame">Klubbens Hall of Fame</h2>
+          <p data-i18n="p.HallofFame">
             Gennem årene har mange mennesker lagt tid, hjerte og kræfter i
             Aalborg Flyers – både på og uden for banen. For at ære dem, der har
             gjort en helt særlig indsats, har vi oprettet vores egen Hall of
@@ -100,13 +100,13 @@
             klubbens historie og værdier – og som har sat et varigt aftryk på
             fællesskabet.
           </p>
-          <p>Medlemmer af Hall of Fame:</p>
+          <p data-i18n="p.Members">Medlemmer af Hall of Fame:</p>
           <ul>
             <li><b>Kim Falgren Vilger (2019)</b></li>
             <li><b>Torben Frydkjær (2019)</b></li>
             <li><b>Ole Lentz (2020)</b></li>
           </ul>
-          <p>
+          <p data-i18n="p.thanks">
             Vi skylder jer stor tak. Flyers ville ikke være det samme uden jer.
           </p>
         </div>
@@ -119,25 +119,25 @@
       </div>
 
 
-      <h2>Klubbens rekorder</h2>
-      <p>Aalborg Flyers har haft mange store øjeblikke gennem årene – her er fire af dem, vi er særligt stolte af:</p>
+      <h2 data-i18n="h2.records">Klubbens rekorder</h2>
+      <p data-i18n="p.wereproud">Aalborg Flyers har haft mange store øjeblikke gennem årene – her er fire af dem, vi er særligt stolte af:</p>
 
       <div class="recordWrapper">
         <div class="record">
-          <h3>Første danske mestre nogensinde</h3>
-          <p>I 1992 blev vi de allerførste til at vinde et officielt dansk mesterskab i floorball. Finalesejr på 9-1 over Frederikshavn Bulldogs – en kamp der skrev historie.</p>
+          <h3 data-i18n="h3.first">Første danske mestre nogensinde</h3>
+          <p data-i18n="p.first">I 1992 blev vi de allerførste til at vinde et officielt dansk mesterskab i floorball. Finalesejr på 9-1 over Frederikshavn Bulldogs – en kamp der skrev historie.</p>
         </div>
         <div class="record">
-          <h3>Største sejr i klubbens historie</h3>
-          <p>I 1992 slog vi Brønderslev Hot Shots med hele 27-3. Det står stadig som klubbens største sejr nogensinde.</p>
+          <h3 data-i18n="h3.second">Største sejr i klubbens historie</h3>
+          <p data-i18n="p.second">I 1992 slog vi Brønderslev Hot Shots med hele 27-3. Det står stadig som klubbens største sejr nogensinde.</p>
         </div>
         <div class="record">
-          <h3>Mest dedikerede spiller gennem tiden</h3>
-          <p>Ole Lentz har spillet 236 kampe i Flyers-trøjen – og er samtidig klubbens topscorer med 177 mål og 271 point.</p>
+          <h3 data-i18n="h3.third">Mest dedikerede spiller gennem tiden</h3>
+          <p data-i18n="p.third">Ole Lentz har spillet 236 kampe i Flyers-trøjen – og er samtidig klubbens topscorer med 177 mål og 271 point.</p>
         </div>
         <div class="record">
-          <h3>Første damepokaltitel</h3>
-          <p>I sæsonen 2015/2016 tog vores nystartede damehold førstepladsen i 1. division og skrev et nyt kapitel i klubbens historie.</p>
+          <h3 data-i18n="h3.fourth">Første damepokaltitel</h3>
+          <p data-i18n="p.fourth">I sæsonen 2015/2016 tog vores nystartede damehold førstepladsen i 1. division og skrev et nyt kapitel i klubbens historie.</p>
         </div>
       </div>
     </main>
