@@ -42,7 +42,7 @@ nav {
   background-color: var(--primary);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -278,6 +278,12 @@ button:hover {
   transform: scale(1.1);
 }
 
+.lang-btn {
+  padding: 0.5rem;
+  box-shadow: none;
+  margin-inline: 0.25rem;
+  position: relative;
+}
 /* ContactCards */
 
 .bestyrelseWrapper {
@@ -759,13 +765,13 @@ dialog::backdrop {
   display: none;
   position: unset;
   font-size: 20px;
+  justify-content: center;
 }
 
 .dropdown-content a {
   display: block;
   width: 100%;
   padding: 10px 0;
-  text-align: center;
 }
 .dropdown {
   width: 100%;
@@ -803,6 +809,10 @@ dialog::backdrop {
     padding: 16px;
     margin: 0 auto;
   }
+li:hover .dropdown-content {
+  display: block;
+  width: 100%;
+}
 
   .nav-links.active{
     top: 100px;

@@ -8,8 +8,8 @@
 
    "p.address_info": "It’s easy to get here – whether by car, bike, or bus.Bus line 14 stops right at the entrance, and line 11 stops just a short walk away.  There is free parking and great facilities for both players and spectators.", 
 
-      "h2. equipment": "You can borrow equipment",
-      "p. equipment": "You don’t need to go out and buy equipment before you start – you can borrow a stick from the club. We provide basic gear – all you need is indoor sports shoes and some comfortable clothes you can move in.",
+      "h2.equipment": "You can borrow equipment",
+      "p.equipment": "You don’t need to go out and buy equipment before you start – you can borrow a stick from the club. We provide basic gear – all you need is indoor sports shoes and some comfortable clothes you can move in.",
       
       "h2.broken": "Broken Equipment and Materials in the Hall",
       
@@ -20,7 +20,22 @@
 
             "p.rules": "At Aalborg Flyers, we do our best to create a safe and positive environment for everyone – both on the court and on the sidelines.",
 
-            "p.rules_2": "We know that support from parents, friends, and fans can make a huge difference – especially for younger players. But good behavior is everything."
+            "p.rules_2": "We know that support from parents, friends, and fans can make a huge difference – especially for younger players. But good behavior is everything.",
+
+            "ul.rules":"Our Guidelines for Good Conduct",
+
+            "li.rule1": "You’re very welcome to watch training and matches – it means a lot to the players",
+            "li.rule2":"Cheer them on – but let the kids play the game themselves",
+            "li.rule3":"Keep a respectful distance from coaches and players",
+            "li.rule4":"Respect the coach’s decisions – even if you disagree",
+            "li.rule5":"Accept the referee’s calls – it’s part of the game",
+            "li.rule6":"Help create a positive atmosphere, regardless of the result",
+            "li.rule7":"Ask “Did you have fun?” instead of “Did you win?”",
+            "li.rule8":"Make sure the kids have the right gear – but joy and enthusiasm matter more than expensive equipment",
+            "li.rule9":"Support the club’s efforts – volunteers are the backbone of everything we do",
+            "li.rule10":"Remember: It’s your child playing – not you",
+
+            "p.remember":"Together, we protect the community we’re all a part of."
 
 
 

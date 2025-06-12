@@ -14,14 +14,10 @@
   <header>
     <nav class="navbar">
       <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
-      <div>
-        <button class="lang-btn" data-lang="da">Dansk</button>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
       <ul class="nav-links">
         <li class="nav-item activePage"><a href="./index.html" data-i18n="nav.home">HJEM</a></li>
         <li class="nav-item">
-          <a class="drop" href="./traening.html" data-i18n="nav.training">TRÆNING ▼</a>
+          <a class="drop" href="./traening.html" data-i18n="nav.training">HOLD ▼</a>
           <ul class="dropdown-content">
             <li><a href="./traeningJunior.html" data-i18n="nav.junior">JUNIOR TRÆNING</a></li>
             <li><a href="./traeningSenior.html" data-i18n="nav.senior">SENIOR TRÆNING</a></li>
@@ -33,6 +29,10 @@
         <li class="nav-item"><a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a></li>
       </ul>
   
+      <div>
+        <button class="lang-btn" data-lang="da">Dansk</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
       <label for="menu_toggle" class="hamburger">
         <input type="checkbox" id="menu_toggle">
         <span></span>
@@ -48,7 +48,7 @@
           <i class="fa-solid fa-angle-down"></i>
         </a>
     <main>
-      <h2 id="scroll-here" style="scroll-margin-top:130px;">Gratis prøvetræning – Kom og vær med!</h2>
+      <h2 data-i18n="h2.tryout" id="scroll-here" style="scroll-margin-top:130px;">Gratis prøvetræning – Kom og vær med!</h2>
       <div class="wrapperCTA">
         <div class="textSectionTwo">
         
@@ -92,25 +92,25 @@
       <p data-i18n="p.community_2">Hos os er det lige så vigtigt at være en god holdkammerat, som det er at score mål. Her lærer du ikke bare at spille – du bliver en del af et hold, hvor vi bakker hinanden op både på og uden for banen.</p>
       </article>
       <article>
-      <h3>Bliv medlem af Aalborg Flyers</h3>
-      <p>Det er nemt at blive en del af Aalborg Flyers!
+      <h3 data-i18n="h3.become_member">Bliv medlem af Aalborg Flyers</h3>
+      <p data-i18n="its_easy">Det er nemt at blive en del af Aalborg Flyers!
       Vi har gjort det enkelt at komme i gang – her er de fire trin til at blive medlem:</p>
       <ol>
-        <li>
+        <li data-i18n="li.freepractice">
           <strong>Kom til en gratis prøvetræning</strong><br>
           Hver tirsdag kl. 16.00 har vi åbne træninger for nye spillere. Du skal bare møde op i sportstøj – vi har udstyret
           klar.
         </li>
-        <li>
+        <li data-i18n="li.trainertalk">
           <strong>Få en snak med træneren</strong><br>
           Efter træningen hjælper vi dig med at finde det hold, der passer bedst til din alder og dit niveau.
         </li>
-        <li>
+        <li data-i18n="li.registeronline">
           <strong>Tilmeld dig online</strong><br>
           Når du er klar, opretter du en bruger og tilmelder dig via vores system. Det er hurtigt og nemt, og vi hjælper
           gerne, hvis du har brug for det.
         </li>
-        <li>
+        <li data-i18n="li.welcome">
           <strong>Velkommen på holdet!</strong><br>
           Når du er meldt ind, modtager du en klubhåndbog med praktisk information, vedtægter og alt det, du skal vide som
           medlem af Aalborg Flyers.
@@ -161,17 +161,17 @@
         <div class="prisInfo">
         <p data-i18n="p.notice">*Alle priser er per halve sæson</p>
           <p data-i18n="p.info">Aalborg Flyers Floorball Club bruger MinForening til betaling af kontingent, samt tilmelding af aktiviteter. Du kan oprette din bruger ved at trykke på knappen nedenunder, og tilmelde dig MinForening.</p>
-          <button>Meld dig ind i fællesskabet</button>
+          <button data-i18n="btn.Sign_Up">Meld dig ind i fællesskabet</button>
           </div>
       </div>
 
       <article>
-        <h3>En guide til Minforening</h3>
-        <p>Er du ny til MinForening? Og har du ikke styr på hvordan appen fungere, kan du hente en masse nyttig information inde på
+        <h3 data-i18n="h3.a_guide">En guide til Minforening</h3>
+        <p data-i18n="p.a_guide">Er du ny til MinForening? Og har du ikke styr på hvordan appen fungere, kan du hente en masse nyttig information inde på
         deres support side, som kan findes ved at trykke på knappen nedenunder.</p>
-        <button>Få din guide</button>
-        <h3>Handelsbetingelser</h3>
-        <p>Betaling
+        <button data-i18n="btn.getguide">Få din guide</button>
+        <h3 data-i18n="h2.terms">Handelsbetingelser</h3>
+        <p data-i18n="p.payment">Betaling
         Tilmelding og betaling af kontingent sker gennem appen ”Min Forening”/MobilePay. <br>
         <br>
         Det er tilladt at deltage i 3 træninger inden indmeldelse i Aalborg Flyers skal ske. Kontingentbetaling sker for hver
