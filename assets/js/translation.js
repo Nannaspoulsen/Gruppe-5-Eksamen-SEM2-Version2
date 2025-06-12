@@ -7,6 +7,7 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
     e.preventDefault();
     const lang = btn.getAttribute("data-lang");
     changeLanguage(lang);
+    window.location.reload();
   });
 });
 
@@ -28,12 +29,21 @@ async function changeLanguage(lang) {
 
   const currentPage = window.location.pathname.split("/").pop().split(".")[0];
 
+  
+
   try {
     const sharedRes = await fetch(`./assets/translations/shared.${selectedLang}.json`);
-    const pageRes = await fetch(`./assets/translations/${currentPage}.${selectedLang}.json`);
-
     const sharedTranslations = await sharedRes.json();
-    const pageTranslations = await pageRes.json();
+
+    let pageTranslations = {};
+    try{
+       const pageRes = await fetch(`./assets/translations/${currentPage}.${selectedLang}.json`);
+       if (pageRes  .ok) {
+         pageTranslations = await pageRes.json();
+       }
+    } catch (error) {
+      console.error("Error loading page translations:", error);
+    }
 
     const translations = { ...sharedTranslations, ...pageTranslations };
 

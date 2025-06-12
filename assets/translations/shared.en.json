@@ -6,8 +6,11 @@
   "nav.signup": "SIGN UP",
   "nav.info": "PRACTICAL",
   "nav.about": "ABOUT US",
-  "nav.contact": "CONTACT" 
-   }
+  "nav.contact": "CONTACT",
+  "training": "Training", 
+  "trainers": "Trainers",
+  "training.btn": "Read about the team"
+  }
 
 
 

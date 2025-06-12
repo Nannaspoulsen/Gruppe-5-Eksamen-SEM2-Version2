@@ -4,6 +4,7 @@ const postsEndpoint = "wp-json/wp/v2/posts";
 const getRealImageUrls = "?acf_format=standard";
 const authEndpoint = "wp-json/jwt-auth/v1/token";
 const fullImage = "?acf_format=standard&per_page=100";
+const lang = localStorage.getItem("lang") || "da";
 
 const url = domain + postsEndpoint + fullImage;
 
@@ -11,12 +12,7 @@ const url = domain + postsEndpoint + fullImage;
 
 
 
-document.querySelectorAll(".lang-btn").forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const lang = btn.getAttribute("data-lang");
-  });
-});
+
 
 
 fetch(url)
@@ -28,8 +24,14 @@ fetch(url)
   .catch((error) => console.log("Der er sket en fejl:", error));
 
   function createJuniorCard(contacts) {
-  const lang = localStorage.getItem("lang") || "da";
-  const targetCategoryId = lang === "da" ? 9 : 11; 
+
+  let targetCategoryId
+  
+  if (lang === "da") {
+    targetCategoryId = 9;
+  } else if (lang === "en") {
+    targetCategoryId = 11; 
+  }
 
   contacts.forEach(contact => {
   
@@ -79,7 +81,7 @@ fetch(url)
     <p>${fullDescription}</p>
   </div>
 </details>
-      <button data-dialog="dialog-${slug}" class="openDialogBtn">Læs mere om holdet</button>
+      <button data-dialog="dialog-${slug}" class="openDialogBtn" data-i18n="training.btn">Læs mere om holdet</button>
     </div>
   `;
   holdCardWrapperEl.appendChild(cardEl);
