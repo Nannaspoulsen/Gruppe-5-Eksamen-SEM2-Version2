@@ -1,6 +1,7 @@
 const items = document.querySelectorAll('.gallery-item');
 let current = 0;
 
+
 function updateCarousel() {
   items.forEach((img, i) => {
     img.classList.remove('prev', 'active', 'next');
@@ -28,6 +29,7 @@ updateCarousel();
 
 
 
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -50,3 +52,35 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
   });
 })
+
+
+
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const lang = btn.getAttribute("data-lang");
+    changeLanguage(lang);
+  });
+});
+
+
+
+async function changeLanguage(lang = null) {
+  const selectedLang = lang || localStorage.getItem("lang") || "da"; 
+
+  localStorage.setItem("lang", selectedLang);
+
+  try {
+    const res = await fetch(`./assets/translations/shared.${selectedLang}.json`);
+    const translations = await res.json();
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (translations[key]) {
+        el.textContent = translations[key];
+      }
+    });
+  } catch (error) {
+    console.error("Translation load error:", error);
+  }
+}
