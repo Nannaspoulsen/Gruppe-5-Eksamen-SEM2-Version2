@@ -28,9 +28,9 @@ fetch(url)
   let targetCategoryId
   
   if (lang === "da") {
-    targetCategoryId = 9;
+    targetCategoryId = 10;
   } else if (lang === "en") {
-    targetCategoryId = 11; 
+    targetCategoryId = 12; 
   }
 
   contacts.forEach(contact => {
@@ -106,7 +106,7 @@ const dialogEl = document.createElement("dialog");
           <span>Trænere: ${coaches}</span>
         </div>
         <p>${fullDescription}</p>
-        <a href="./kontakt.html" class="modalButton">Kontakt træneren</a>
+        <a href="./kontakt.html" class="modalButton" data-i18n="modal.btn">Kontakt træneren</a>
       </div>
     </div>
   `;
@@ -119,6 +119,8 @@ const dialogEl = document.createElement("dialog");
   closeBtn.addEventListener("click", () => dialogEl.close());
 
   });
+
+  changeLanguage(lang);
 }
 
 

@@ -1,6 +1,4 @@
-
 changeLanguage(localStorage.getItem("lang") || "da");
-
 
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -11,38 +9,41 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
   });
 });
 
-
-
 async function changeLanguage(lang) {
-  const selectedLang = lang || "da"; 
+  const selectedLang = lang || "da";
   const currentLang = localStorage.getItem("lang");
   localStorage.setItem("lang", selectedLang);
 
   if (selectedLang === currentLang && selectedLang === "da") {
-    return
+    return;
   }
-  
-   if (selectedLang === "da") {
-    window.location.reload(); 
+
+  if (selectedLang === "da") {
+    window.location.reload();
     return;
   }
 
   const currentPage = window.location.pathname.split("/").pop().split(".")[0];
 
-  
-
   try {
-    const sharedRes = await fetch(`./assets/translations/shared.${selectedLang}.json`);
+    const sharedRes = await fetch(
+      `./assets/translations/shared.${selectedLang}.json`
+    );
     const sharedTranslations = await sharedRes.json();
 
     let pageTranslations = {};
-    try{
-       const pageRes = await fetch(`./assets/translations/${currentPage}.${selectedLang}.json`);
-       if (pageRes  .ok) {
-         pageTranslations = await pageRes.json();
-       }
-    } catch (error) {
-      console.error("Error loading page translations:", error);
+
+    try {
+      const pageRes = await fetch(
+        `./assets/translations/${currentPage}.${selectedLang}.json`
+      );
+      if (!pageRes.ok)
+        throw new Error(
+          `No translation file found for ${currentPage}.${selectedLang}`
+        );
+      pageTranslations = await pageRes.json();
+    } catch (innerErr) {
+      console.warn(innerErr.message);
     }
 
     const translations = { ...sharedTranslations, ...pageTranslations };

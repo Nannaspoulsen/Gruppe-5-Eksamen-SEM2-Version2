@@ -382,7 +382,7 @@ gmp-map {
 .gallery {
   position: relative;
   width: 100%;
-  max-width: 700px; 
+  max-width: 1000px; 
   height: 400px; 
   margin: auto;
   overflow: hidden;
@@ -398,8 +398,8 @@ gmp-map {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 500px;
+  max-height: 500px;
   transform: translate(-50%, -50%) scale(0.8);
   transition: transform 0.2s ease, opacity 0.9s ease;
   z-index: 1;
@@ -593,7 +593,7 @@ gmp-map {
   backdrop-filter: blur(10px);
   margin: 0 auto;
   position: fixed;
-  top:90px;
+  top: 1rem;
   border-radius: 0.5rem;
   border: 2px solid white;
 }
