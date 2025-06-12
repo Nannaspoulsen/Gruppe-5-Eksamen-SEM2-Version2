@@ -65,6 +65,14 @@ function createJuniorCard(contacts) {
         </div>
       </div>
       <p>${description}</p>
+      <details class="accordion">
+  <summary>
+    <i class="fas fa-chevron-right accordion-arrow"></i>
+  </summary>
+  <div class="accordion-content">
+    <p>${fullDescription}</p>
+  </div>
+</details>
       <button data-dialog="dialog-${slug}" class="openDialogBtn">Læs mere om holdet</button>
     </div>
   `;

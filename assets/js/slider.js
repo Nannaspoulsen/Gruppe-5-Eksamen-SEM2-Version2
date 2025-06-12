@@ -1,6 +1,7 @@
 const gallery = document.querySelector('.gallery');
 const items = document.querySelectorAll('.gallery-item');
-let current = 0;
+const galleryPrev = document.querySelector('.gallery-prev');
+const galleryNext = document.querySelector('.gallery-next');
 
 
 if(gallery) {
@@ -10,11 +11,12 @@ function updateCarousel() {
     img.hidden = true;
   });
 
-  const getIndex = i => (i + items.length) % items.length;
-  [getIndex(current - 1), current, getIndex(current + 1)].forEach((i, pos) => {
-    items[i].classList.add(['prev', 'active', 'next'][pos]);
-    items[i].hidden = false;
+  galleryNext.addEventListener('click', () => {
+    current = (current + 1) % items.length;
+    updateCarousel();
   });
+
+  updateCarousel();
 }
 
 document.querySelector('.gallery-prev').onclick = () => {
@@ -33,27 +35,27 @@ updateCarousel();
 
 
 
+// Burger menu
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
-}) 
-
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', (e) => {
-    if (link.classList.contains("redirect")) {
-      window.location.href = link.href
-    } if (link.classList.contains("drop")) {
-      e.preventDefault()
-      e.target.classList.add("redirect")
-    } else {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
-    }
-
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
   });
-})
 
-
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.classList.contains("redirect")) {
+        window.location.href = link.href;
+      } else if (link.classList.contains("drop")) {
+        e.preventDefault();
+        link.classList.add("redirect");
+      } else {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      }
+    });
+  });
+}
