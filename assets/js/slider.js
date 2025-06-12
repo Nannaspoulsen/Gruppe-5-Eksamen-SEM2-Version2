@@ -37,8 +37,16 @@ hamburger.addEventListener('click', () => {
 }) 
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-    hamburger.classList.remove('active');
+  link.addEventListener('click', (e) => {
+    if (link.classList.contains("NOGET")) {
+      window.location.href = link.href
+    } if (link.classList.contains("drop")) {
+      e.preventDefault()
+      e.target.classList.add("NOGET")
+    } else {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+
   });
 })
