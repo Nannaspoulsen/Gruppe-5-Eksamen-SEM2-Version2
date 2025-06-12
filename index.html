@@ -14,24 +14,29 @@
       referrerpolicy="no-referrer"
     />
     <script src="./assets/js/slider.js" defer></script>
+    <script src="./assets/js/translation.js" defer></script>
   </head>
   <body>
   <header>
     <nav class="navbar">
       <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
+      <div>
+        <button class="lang-btn" data-lang="da">Dansk</button>
+        <button class="lang-btn" data-lang="en">English</button>
+      </div>
       <ul class="nav-links">
         <li class="nav-item activePage"><a href="./index.html">HJEM</a></li>
         <li class="nav-item">
           <a class="drop" href="./traening.html">TRÆNING ▼</a>
           <ul class="dropdown-content">
-            <li><a href="./traeningJunior.html">Junior Træning</a></li>
-            <li><a href="./traeningSenior.html">Senior Træning</a></li>
+            <li><a href="./traeningJunior.html" data-i18n="nav.junior">Junior Træning</a></li>
+            <li><a href="./traeningSenior.html" data-i18n="nav.senior">Senior Træning</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a href="./tilmelding.html">TILMELDING</a></li>
-        <li class="nav-item"><a href="./praktiskInfo.html">PRAKTISK</a></li>
-        <li class="nav-item"><a href="./omKlubben.html">OM KLUBBEN</a></li>
-        <li class="nav-item"><a href="./kontakt.html">KONTAKT</a></li>
+        <li class="nav-item"><a href="./tilmelding.html" data-i18n="nav.signup">TILMELDING</a></li>
+        <li class="nav-item"><a href="./praktiskInfo.html" data-i18n="nav.info">PRAKTISK</a></li>
+        <li class="nav-item"><a href="./omKlubben.html" data-i18n="nav.about">OM KLUBBEN</a></li>
+        <li class="nav-item"><a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a></li>
       </ul>
   
       <label for="menu_toggle" class="hamburger">
@@ -59,52 +64,55 @@
             fællesskab, får fede oplevelser og masser af spilleglæde - uanset om
             du er ny på banen eller har haft en stav i hånden før.
           </p>
-          <p>
+
+          <p data-i18n="p.welcome2">
             Vi har plads til alle, der har lyst til at bevæge sig, have det
             sjovt og blive en del af noget større. Det er nemt at komme i gang,
             og vi lover, du ikke kommer til at stå alene.
           </p>
+
         </div>
         <div class="imageSection">
           <img src="./assets/images/Flyers_U13.jpg" alt="Aalborg Flyers U13 hold til Gothia Cup i Sverige" />
         </div>
       </div>
 
-      <h2>Har du lyst til at prøve kræfter med floorball?</h2>
+      <h2 data-i18n="h2.tryout">Har du lyst til at prøve kræfter med floorball?</h2>
       <div class="wrapperCTA">
         <div class="textSectionTwo">
-          <p>
+          <p data-i18n="p.tryout_1">
             Som ny spiller kan godt føles lidt som at træde ind i ukendt
             territorium - men bare rolig, vi har dig! Hos Aalborg Flyers bliver
             du hurtigt en del af fællesskabet, uanset om du har spillet før
             eller bare er nysgerrig på floorball.
           </p>
-          <p>
+          <p data-i18n="p.tryout_2">
             Du er altid velkommen til en
             <b>prøvetime – helt gratis og helt uforpligtende.</b> Vi sørger for,
             at du lander blødt, får en god oplevelse og mærker holdånden fra dag
             ét. Det eneste, du skal gøre, er at møde op - vi klarer resten.
           </p>
+
         </div>
         <div class="iconSection">
           <div class="icon-text">
             <i class="fa-solid fa-calendar-days"></i>
-            <p>Hver tirsdag</p>
+            <p data-i18n="p.date">Hver tirsdag</p>
           </div>
           <div class="icon-text">
             <i class="fa-solid fa-calendar-days"></i>
-            <p>Kl. 16:00 - 17:00</p>
+            <p data-i18n="p.time">Kl. 16:00 - 17:00</p>
           </div>
           <div class="icon-text">
             <i class="fa-solid fa-location-dot"></i>
-            <p>Tornhøjvej 1, 9220 Aalborg SØ</p>
+            <p data-i18n="p.place">Tornhøjvej 1, 9220 Aalborg SØ</p>
           </div>
         </div>
       </div>
 
       <div class="quoteWrapper">
-        <h2>It's a great day for floorball!</h2>
-        <p>Men den bliver endnu bedre med dig!</p>
+        <h2 data-i18n="h2.slogan">It's a great day for floorball!</h2>
+        <p data-i18n="p.slogan">Men den bliver endnu bedre med dig!</p>
       </div>
 
       <div class="gallery">
@@ -121,8 +129,8 @@
       </div>
 
       <article>
-        <h2>Klubbens seneste</h2>
-        <p>
+        <h2 data-i18n="h2.latest">Klubbens seneste</h2>
+        <p data-i18n="p.latest">
 Hos Aalborg Flyers sker der altid noget – fra kampe og træninger til sociale events og fællesskab uden for banen. Herunder kan du se alle klubbens aktiviteter og seneste facebook opslag.
         </p>
       
