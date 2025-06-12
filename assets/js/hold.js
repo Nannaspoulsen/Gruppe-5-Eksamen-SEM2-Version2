@@ -7,12 +7,17 @@ const fullImage = "?acf_format=standard&per_page=100";
 
 const url = domain + postsEndpoint + fullImage;
 
-function setLanguage(lang) {
-  localStorage.setItem("language", lang);
-  location.reload(); 
-}
 
-const language = localStorage.getItem("language") || "da";
+
+
+
+document.querySelectorAll(".lang-btn").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const lang = btn.getAttribute("data-lang");
+  });
+});
+
 
 fetch(url)
   .then((response) => response.json())
@@ -22,8 +27,9 @@ fetch(url)
   })
   .catch((error) => console.log("Der er sket en fejl:", error));
 
-function createJuniorCard(contacts) {
-  const targetCategoryId = language === "da" ? 9 : 11; 
+  function createJuniorCard(contacts) {
+  const lang = localStorage.getItem("lang") || "da";
+  const targetCategoryId = lang === "da" ? 9 : 11; 
 
   contacts.forEach(contact => {
   
