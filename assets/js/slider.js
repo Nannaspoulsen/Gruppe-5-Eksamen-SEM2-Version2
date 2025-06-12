@@ -40,11 +40,11 @@ hamburger.addEventListener('click', () => {
 
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', (e) => {
-    if (link.classList.contains("NOGET")) {
+    if (link.classList.contains("redirect")) {
       window.location.href = link.href
     } if (link.classList.contains("drop")) {
       e.preventDefault()
-      e.target.classList.add("NOGET")
+      e.target.classList.add("redirect")
     } else {
       navLinks.classList.remove('active');
       hamburger.classList.remove('active');
