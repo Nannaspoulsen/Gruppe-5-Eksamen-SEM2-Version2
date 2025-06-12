@@ -28,14 +28,29 @@
         "p.450": "450 DKK",    
         "li.Tournament": "Participation in tournaments",
 
-        "p.notice": "Membership Fees (per half-season",    
+        "p.notice": "Membership Fees (per half-season)",    
 
    
-        "p.info": "Membership Fees (per half-season"    
+        "p.info": "Aalborg Flyers Floorball Club uses MinForening for membership payments and activity sign-ups. You can create your profile by clicking the button below and registering through MinForening.",
+        
+        "h3.become_member": "How to Become a Member of the Club",
+        "its_easy": "It’s easy to become part of Aalborg Flyers! We’ve made it simple to get started – here are the four steps to becoming a member:",
 
+        "li.freepractice": "Join a Free Trial Practice  Every Tuesday at 4:00 PM we host open practices for new players. Just show up in sportswear – we’ve got the equipment ready.",
+
+        "li.trainertalk": "Talk to the Coach After training, we’ll help you find the team that best fits your age and level.",
+
+        "li.registeronline": "Register Online  When you’re ready, create a profile and sign up through our system. It’s quick and easy, and we’re happy to help if needed.",
+
+        "li.welcome": "Welcome to the Team! Once you’re signed up, you’ll receive a club handbook with practical information, club rules, and everything you need to know as a member of Aalborg Flyers.",
 
    
-
+        "h3.a_guide":"Need help with MinForening?",
+        "p.a_guide":" If you're new to the app or unsure how it works, you can find helpful information on their support page, accessible via the button below.",
+        "btn.getguide":"Get your guide",
+        "h2.terms": "Terms and Conditions",
+        "p.payment":"Membership sign-up and payment are done through the Min Forening app or MobilePay. You're allowed to attend 3 training sessions before you must sign up with Aalborg Flyers. Membership fees are paid per half-season (January–June / August–December) or for the full season. Anyone who accepts the club's statutes and has paid the membership fee is considered a full member. Cancellation of Membership  You may cancel your membership at any time – this must be done through MinForening.  There will be no refund for any remaining part of the paid period. Complaints can be directed to the board of Aalborg Flyers via MinForening or by email at bestyrelse@aalborgflyers.dk, or submitted to the official Danish complaints board such as the Consumer Complaints Board (Forbrugerklagenævnet).",
+        "btn.Sign_Up": "Sign up"
 
 
 
