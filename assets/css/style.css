@@ -512,10 +512,10 @@ gmp-map {
 }
 
 .holdCard img {
-  width: 100%;
+  width: 600px;
   height: auto;
   border-radius: 0.5rem;
-  object-fit: cover;
+  object-fit: contain;
   padding: 0;
 }
 

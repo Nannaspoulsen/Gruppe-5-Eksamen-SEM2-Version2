@@ -12,7 +12,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="./assets/js/modal.js" defer></script>
     <script src="./assets/js/hold.js" defer></script>
   </head>
   <body>
@@ -25,6 +24,10 @@
             width="100"
             height="100"
           />
+        </div>
+        <div>
+          <button onclick="setLanguage('da')">Dansk</button>
+          <button onclick="setLanguage('en')">English</button>
         </div>
         <ul>
           <li><a href="./index.html">HJEM</a></li>
@@ -44,161 +47,49 @@
     </header>
 
     <main>
-      <div class="holdCardWrapper">
-      <div class="holdCard">
-        <img src="./assets/images/Flyers U11.jpg" alt="" />
+      <div class="holdCardWrapper"></div>
 
-        <div class="cardContent">
-          <h3>U6</h3>
+      <dialog id="dialog-u6" class="modalDialog">
+        <div class="">
+          <button class="closeBtn">X</button>
+          <img src="./assets/images/Flyers U11.jpg" alt="" />
 
-          <div class="cardInfo">
+          <div class="modalContent">
+            <h3>U6 - De første skridt ind i floorballens verden</h3>
+
             <div class="infoItem">
               <i class="fa-solid fa-clock"></i>
-              <span>Træning:  Lørdage i lige uger kl. 9.00–10.00</span>
+              <span>Træning: Lørdage i lige uger kl. 9.00–10.00</span>
             </div>
             <div class="infoItem">
               <i class="fa-solid fa-user"></i>
-              <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
+              <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
             </div>
+
+            <p>
+              På vores U6-hold tager vi de første skridt ind i floorballens
+              verden – og det skal først og fremmest være sjovt! Her mødes børn
+              i alderen ca. 4–6 år til leg, bevægelse og masser af grin med stav
+              og bold.
+            </p>
+
+            <p>
+              Holdet består af både nye og mere erfarne spillere, og der er
+              plads til alle – uanset niveau og erfaring. Vi fokuserer på at
+              skabe trygge rammer, hvor børnene kan lære spillets
+              grund-elementer gennem leg og små øvelser.
+            </p>
+
+            <p>
+              Der er også mulighed for at deltage i KidzLiga-stævner, hvor
+              børnene kan prøve kræfter med rigtig kamp i en hyggelig og uformel
+              stemning sammen med deres holdkammerater.
+            </p>
+
+            <a href="./kontakt.html" class="modalButton">Kontakt træneren</a>
           </div>
-
-          <p>
-            På vores U6-hold tager vi de første skridt ind i floorballens verden
-            – og det skal først og fremmest være sjovt! Her mødes børn i alderen
-            ca. 4–6 år til leg, bevægelse og masser af grin med stav og....
-          </p>
-
-          <button data-dialog="dialog-u6">Læs mere om holdet</button>
         </div>
-      </div>
-      <div class="holdCard">
-        <img src="./assets/images/Flyers U11.jpg" alt="" />
-
-        <div class="cardContent">
-          <h3>U6</h3>
-
-          <div class="cardInfo">
-            <div class="infoItem">
-              <i class="fa-solid fa-clock"></i>
-              <span>Træning:  Lørdage i lige uger kl. 9.00–10.00</span>
-            </div>
-            <div class="infoItem">
-              <i class="fa-solid fa-user"></i>
-              <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
-            </div>
-          </div>
-
-          <p>
-            På vores U6-hold tager vi de første skridt ind i floorballens verden
-            – og det skal først og fremmest være sjovt! Her mødes børn i alderen
-            ca. 4–6 år til leg, bevægelse og masser af grin med stav og....
-          </p>
-
-          <button data-dialog="dialog-u6">Læs mere om holdet</button>
-        </div>
-      </div>
-      <div class="holdCard">
-        <img src="./assets/images/Flyers U11.jpg" alt="" />
-
-        <div class="cardContent">
-          <h3>U6</h3>
-
-          <div class="cardInfo">
-            <div class="infoItem">
-              <i class="fa-solid fa-clock"></i>
-              <span>Træning:  Lørdage i lige uger kl. 9.00–10.00</span>
-            </div>
-            <div class="infoItem">
-              <i class="fa-solid fa-user"></i>
-              <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
-            </div>
-          </div>
-
-          <p>
-            På vores U6-hold tager vi de første skridt ind i floorballens verden
-            – og det skal først og fremmest være sjovt! Her mødes børn i alderen
-            ca. 4–6 år til leg, bevægelse og masser af grin med stav og....
-          </p>
-
-          <button data-dialog="dialog-u6">Læs mere om holdet</button>
-        </div>
-      </div>
-      <div class="holdCard">
-        <img src="./assets/images/Flyers U11.jpg" alt="" />
-
-        <div class="cardContent">
-          <h3>U6</h3>
-
-          <div class="cardInfo">
-            <div class="infoItem">
-              <i class="fa-solid fa-clock"></i>
-              <span>Træning:  Lørdage i lige uger kl. 9.00–10.00</span>
-            </div>
-            <div class="infoItem">
-              <i class="fa-solid fa-user"></i>
-              <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
-            </div>
-          </div>
-
-          <p>
-            På vores U6-hold tager vi de første skridt ind i floorballens verden
-            – og det skal først og fremmest være sjovt! Her mødes børn i alderen
-            ca. 4–6 år til leg, bevægelse og masser af grin med stav og....
-          </p>
-
-          <button data-dialog="dialog-u6">Læs mere om holdet</button>
-        </div>
-      </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dialog id="dialog-u6" class="modalDialog">
-  <div class="">
-    <button class="closeBtn">X</button>
-    <img src="./assets/images/Flyers U11.jpg" alt="" />
-
-    <div class="modalContent">
-      <h3>U6 - De første skridt ind i floorballens verden</h3>
-
-      <div class="infoItem">
-        <i class="fa-solid fa-clock"></i>
-        <span>Træning: Lørdage i lige uger kl. 9.00–10.00</span>
-      </div>
-      <div class="infoItem">
-        <i class="fa-solid fa-user"></i>
-        <span>Trænere: Peter Wulff og Casper Skatt Christensen</span>
-      </div>
-
-      <p>
-        På vores U6-hold tager vi de første skridt ind i floorballens verden – og det skal først og fremmest være sjovt! Her mødes børn i alderen ca. 4–6 år til leg, bevægelse og masser af grin med stav og bold.
-      </p>
-
-      <p>
-        Holdet består af både nye og mere erfarne spillere, og der er plads til alle – uanset niveau og erfaring. Vi fokuserer på at skabe trygge rammer, hvor børnene kan lære spillets grund-elementer gennem leg og små øvelser.
-      </p>
-
-      <p>Der er også mulighed for at deltage i KidzLiga-stævner, hvor børnene kan prøve kræfter med rigtig kamp i en hyggelig og uformel stemning sammen med deres holdkammerater.</p>
-
-      <a href="./kontakt.html" class="modalButton">Kontakt træneren</a>
-    </div>
-  </div>
-</dialog>
-
+      </dialog>
     </main>
 
     <footer>
