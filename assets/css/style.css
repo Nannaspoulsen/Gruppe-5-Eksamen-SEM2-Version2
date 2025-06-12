@@ -675,6 +675,9 @@ dialog::backdrop {
   width: 40px;
   z-index: 2;
 }
+.hamburger input:checked~.nav-links {
+  top: 100px;
+}
 
 .hamburger span {
       display: block;
@@ -716,8 +719,6 @@ dialog::backdrop {
 .dropdown-content {
   display: none;
   position: unset;
-  display: flex;
-  flex-direction: column;
   font-size: 20px;
 }
 
@@ -738,7 +739,7 @@ dialog::backdrop {
 }
 
 #dropdown-toggle:checked+label+.dropdown-content {
-  display: block;
+  display: flex;
 }
 
   .nav-links {
