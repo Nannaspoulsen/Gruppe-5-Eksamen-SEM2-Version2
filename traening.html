@@ -14,64 +14,91 @@
       referrerpolicy="no-referrer"
     />
     <script src="./assets/js/slider.js" defer></script>
-    <script src="./assets/js/translation.js"></script>
+    <script src="./assets/js/translation.js" defer></script>
     
   </head>
   <body>
   <header>
     <nav class="navbar">
-      <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
-      <ul class="nav-links">
-        <li class="nav-item"><a href="./index.html" data-i18n="nav.home">HJEM</a></li>
-        <li class="nav-item">
-          <a class="drop activePage" href="./traening.html" data-i18n="nav.training">HOLD ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="./traeningJunior.html" data-i18n="nav.junior">JUNIOR TRÆNING</a></li>
-            <li><a href="./traeningSenior.html" data-i18n="nav.senior">SENIOR TRÆNING</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="./tilmelding.html" data-i18n="nav.signup">TILMELDING</a></li>
-        <li class="nav-item"><a href="./praktiskInfo.html" data-i18n="nav.info">PRAKTISK</a></li>
-        <li class="nav-item"><a href="./omKlubben.html" data-i18n="nav.about">OM KLUBBEN</a></li>
-        <li class="nav-item"><a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a></li>
-      </ul>
-  
-      <div>
-        <button class="lang-btn" data-lang="da">Dansk</button>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
-      <label for="menu_toggle" class="hamburger">
-        <input type="checkbox" id="menu_toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </nav>
+        <!-- Kilde på logo: Aalborg Flyers, 2025. flyers-fav-icon.svg Tilgængelig på: https://aalborgflyers.dk/ [Tilgået d. 6/6 2025]. -->
+         <div class="container">
+        <a href="./index.html" class="logo"
+          ><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""
+        /></a>
+        <ul class="nav-links">
+          <li class="nav-item activePage">
+            <a href="./index.html" data-i18n="nav.home">HJEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="drop" href="./traening.html" data-i18n="nav.training"
+              >HOLD ▼</a
+            >
+            <ul class="dropdown-content">
+              <li>
+                <a href="./traeningJunior.html" data-i18n="nav.junior"
+                  >JUNIOR TRÆNING</a
+                >
+              </li>
+              <li>
+                <a href="./traeningSenior.html" data-i18n="nav.senior"
+                  >SENIOR TRÆNING</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./tilmelding.html" data-i18n="nav.signup">TILMELDING</a>
+          </li>
+          <li class="nav-item">
+            <a href="./praktiskInfo.html" data-i18n="nav.info">PRAKTISK</a>
+          </li>
+          <li class="nav-item">
+            <a href="./omKlubben.html" data-i18n="nav.about">OM KLUBBEN</a>
+          </li>
+          <li class="nav-item">
+            <a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a>
+          </li>
+        </ul>
+
+        <div>
+          <button class="lang-btn" data-lang="da">Dansk</button>
+          <button class="lang-btn" data-lang="en">English</button>
+        </div>
+        <label for="menu_toggle" class="hamburger">
+          <input type="checkbox" id="menu_toggle" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        </div>
+      </nav>
   </header>
     <div class="hero">
       <img loading="lazy" src="./assets/images/U13_Jubilæum.jpg" alt="" />
     </div>
 
     <main>
+      <div class="container">
       <div class="wrapper">
         <div class="textSection">
-          <h2>Find dit hold og kom med på banen!</h2>
-          <p>
+          <h2 data-i18n="h2-training">Find dit hold og kom med på banen!</h2>
+          <p data-i18n="p-training-1">
             Hos Aalborg Flyers har vi hold for alle aldre og niveauer - fra de
             allermindste til rutinerede seniorer. Uanset om du er helt ny eller
             har spillet i flere år, er der plads til dig.
           </p>
-          <p>
+          <p data-i18n="p-training-2">
             Under vores junior og seniorhold, får du en oversigt over
             træningstidspunkter, niveau og hvad du kan forvente.
           </p>
-          <p>
+          <p data-i18n="p-training-3">
             Er du i tvivl om hvilket hold, der passer til dig? Under hvert hold
             kan du finde kontaktoplysninger på træneren, som står klar til at
             svare på spørgsmål og hjælpe dig på rette vej.
           </p>
-          <button>Se juniorhold her!</button>
-          <button>Se seniorhold her!</button>
+          <a class="traening-button" href="./traeningJunior.html" data-i18n="button-junior">Se Juniorhold her!</a>
+          <a class="traening-button"href="./traeningSenior.html" data-i18n="button-senior">Se Seniorhold her!</a>
+
         </div>
         <div class="imageSection">
           <!-- Kilde: Colourbox, 2025. COLOURBOX18041730.jpg Tilgængelig på:
@@ -79,16 +106,17 @@
           <img loading="lazy" src="./assets/images/Stave.png" alt="Grafik der viser to floorball stave" />
         </div>
       </div>
+      </div>
     </main>
 
     <footer>
+      <div class="container">
       <div class="footer-top">
         <div class="footer-left">
           <img
             src="./assets/images/flyers-fav-icon.svg"
             alt="Aalborg Flyers Logo"
-            width="100"
-            height="100"
+            
           />
           <p>
             Aalborg Flyers Floorball Club<br />
@@ -109,6 +137,7 @@
           Copyright © 2025 Aalborg Flyers<br />
           CVR: 26781256
         </p>
+      </div>
       </div>
     </footer>
   </body>

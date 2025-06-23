@@ -13,33 +13,59 @@
   <body>
   <header>
     <nav class="navbar">
-      <a href="./index.html" class="logo"><img src="./assets/images/flyers-fav-icon.svg" width="100" alt=""></a>
-      <ul class="nav-links">
-        <li class="nav-item"><a href="./index.html" data-i18n="nav.home">HJEM</a></li>
-        <li class="nav-item">
-          <a class="drop" href="./traening.html" data-i18n="nav.training">HOLD ▼</a>
-          <ul class="dropdown-content">
-            <li><a href="./traeningJunior.html" data-i18n="nav.junior">JUNIOR TRÆNING</a></li>
-            <li><a class="activePage" href="./traeningSenior.html" data-i18n="nav.senior">SENIOR TRÆNING</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a href="./tilmelding.html" data-i18n="nav.signup">TILMELDING</a></li>
-        <li class="nav-item"><a href="./praktiskInfo.html" data-i18n="nav.info">PRAKTISK</a></li>
-        <li class="nav-item"><a href="./omKlubben.html" data-i18n="nav.about">OM KLUBBEN</a></li>
-        <li class="nav-item"><a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a></li>
-      </ul>
-  
-      <div>
-        <button class="lang-btn" data-lang="da">Dansk</button>
-        <button class="lang-btn" data-lang="en">English</button>
-      </div>
-      <label for="menu_toggle" class="hamburger">
-        <input type="checkbox" id="menu_toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </nav>
+        <!-- Kilde på logo: Aalborg Flyers, 2025. flyers-fav-icon.svg Tilgængelig på: https://aalborgflyers.dk/ [Tilgået d. 6/6 2025]. -->
+         <div class="container">
+        <a href="./index.html" class="logo"
+          ><img src="./assets/images/flyers-fav-icon.svg" alt=""
+        /></a>
+        <ul class="nav-links">
+          <li class="nav-item activePage">
+            <a href="./index.html" data-i18n="nav.home">HJEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="drop" href="./traening.html" data-i18n="nav.training"
+              >HOLD ▼</a
+            >
+            <ul class="dropdown-content">
+              <li>
+                <a href="./traeningJunior.html" data-i18n="nav.junior"
+                  >JUNIOR TRÆNING</a
+                >
+              </li>
+              <li>
+                <a href="./traeningSenior.html" data-i18n="nav.senior"
+                  >SENIOR TRÆNING</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="./tilmelding.html" data-i18n="nav.signup">TILMELDING</a>
+          </li>
+          <li class="nav-item">
+            <a href="./praktiskInfo.html" data-i18n="nav.info">PRAKTISK</a>
+          </li>
+          <li class="nav-item">
+            <a href="./omKlubben.html" data-i18n="nav.about">OM KLUBBEN</a>
+          </li>
+          <li class="nav-item">
+            <a href="./kontakt.html" data-i18n="nav.contact">KONTAKT</a>
+          </li>
+        </ul>
+
+        <div>
+          <button class="lang-btn" data-lang="da">Dansk</button>
+          <button class="lang-btn" data-lang="en">English</button>
+        </div>
+        <label for="menu_toggle" class="hamburger">
+          <input type="checkbox" id="menu_toggle" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        </div>
+      </nav>
+      <div class="nav-spacer"></div>
   </header>
 
     <main>
@@ -48,16 +74,18 @@
       d. 6/6 2025].
       
       Font Awesome, 2025. clock Tilgængelig på: https://fontawesome.com/icons/clock?f=classic&s=solid [Tilgået d. 6/6 2025]. -->
-      
+      <div class="container">
       <div class="holdCardWrapper"></div>
 
       <dialog id="dialog-u6" class="modalDialog">
         
        
       </dialog>
+      </div>
     </main>
 
     <footer>
+      <div class="container">
   <div class="footer-top">
     <div class="footer-left">
       <img
@@ -83,6 +111,7 @@
   <div class="footer-bottom">
     <p>Copyright © 2025 Aalborg Flyers<br />
     CVR: 26781256</p>
+  </div>
   </div>
 </footer>
 

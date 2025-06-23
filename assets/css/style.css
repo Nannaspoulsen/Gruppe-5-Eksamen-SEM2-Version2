@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
+  
 }
 
 html {
@@ -11,69 +12,94 @@ html {
 
 :root {
   --primary: #427ff9;
-  --hoverCTA: #264D99;
-  --secondary: #F8C342;
-  --section: #EAF1FF;
-  --text: #1F1F1F;
-  --primaryBackground: #F5F5F5;
-  --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-family-bold: 'Helvetica Neue Bold', Helvetica, Arial, sans-serif;
+  --hoverCTA: #264d99;
+  --secondary: #f8c342;
+  --section: #eaf1ff;
+  --text: #1f1f1f;
+  --primaryBackground: #f5f5f5;
+  --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-family-bold: "Helvetica Neue Bold", Helvetica, Arial, sans-serif;
 }
 
-header {
-  padding-top: 100px;
+
+
+
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: clamp(1rem, 5vw, 4rem);
+  padding-right: clamp(1rem, 5vw, 4rem);
+  box-sizing: border-box;
 }
 
-main {
-  margin: 5rem;
+main .container {
+  padding-bottom: 5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-bold);
   color: var(--hoverCTA);
-  font-size: 46px;
+  font-size: clamp(2rem, 5vw, 2.875rem);
   font-weight: bold;
 }
 
-
-/* nav */
-
-nav {
-  background-color: var(--primary);
+/* navbar */
+nav .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
+}
+
+nav {
+  background-color: var(--primary);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
+  max-height: 10rem;
 }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-}
+
 
 nav li {
   list-style: none;
-  display: inline-block;
   position: relative;
+  display: inline-block;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  padding: .75rem;
-  font-size: 24px;
+  padding: 0.75rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: bold;
   display: block;
   position: relative;
 }
 
+.logo img {
+  height: clamp(75px, 10vw, 125px);
+  max-width: 100%;
+  min-width: 75px;
+}
+
+.nav-spacer{
+  height: clamp(5rem, 18vh, 15rem);
+}
+
 nav a:hover {
   scale: 1.1;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 nav a::after {
@@ -86,21 +112,15 @@ nav a::after {
   background-color: var(--secondary);
   transform: scaleX(0);
   transform-origin: center;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 nav a:hover::after {
-  transform: scaleX(1)
-}
-
-.logo img {
-  height: 75px;
-  padding: 5px;
+  transform: scaleX(1);
 }
 
 .activePage {
   border-bottom: 2px solid var(--secondary);
-  
 }
 
 .dropdown-content {
@@ -110,6 +130,7 @@ nav a:hover::after {
   left: 0;
   background: var(--primary);
   padding: 1rem;
+  z-index: 999;
 }
 
 li:hover .dropdown-content {
@@ -123,21 +144,20 @@ li:hover .dropdown-content {
   margin: 2rem;
 }
 
-
 /* hero */
 .hero img {
   width: 100%;
   height: auto;
   max-height: 90vh;
   object-fit: cover;
- 
+  padding-top: 5rem;
 }
 
 /* Scoller animation */
 
 .scroller {
-  animation: scrolling 3s ease-in-out infinite ;
-  font-size: 50px;
+  animation: scrolling 3s ease-in-out infinite;
+  font-size: 3.125rem;
   position: absolute;
   top: 85vh;
   left: 50%;
@@ -145,22 +165,20 @@ li:hover .dropdown-content {
   color: white;
 }
 
-
 @keyframes scrolling {
   0% {
-    transform: translate(0)
+    transform: translate(0);
   }
   50% {
-    transform: translate(0, 20px)
+    transform: translate(0, 20px);
   }
   100% {
-    transform: translate(0)
+    transform: translate(0);
   }
 }
 
-
 h1 {
-  font-size: 50px;
+  font-size: 3.125rem;
   text-align: center;
   font-weight: lighter;
 }
@@ -168,7 +186,6 @@ h1 {
 /*  */
 /* Billede og tekst boks */
 /*  */
-
 
 .wrapper {
   display: flex;
@@ -190,7 +207,6 @@ h1 {
 
 .imageSection img {
   width: 100%;
-  /* max-width: 466px;  */
   object-fit: cover;
   vertical-align: middle;
 }
@@ -205,9 +221,7 @@ h1 {
 }
 
 .textSection p {
-  font-size: 16px;
-
-  
+  font-size: 1rem;
 }
 .textSection h2 {
   margin-bottom: 1rem;
@@ -216,9 +230,8 @@ h1 {
 
 .textSection li {
   list-style-position: inside;
-  list-style-type:"- ";
+  list-style-type: "- ";
 }
-
 
 /* CTA forside */
 
@@ -246,7 +259,7 @@ h1 {
   margin: 0;
   align-items: center;
   gap: 1rem;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .iconSection i {
@@ -254,21 +267,16 @@ h1 {
   color: var(--hoverCTA);
 }
 
-
-
-
-
-
 /* Knap */
 
 button {
-  background-color: #80AAFF;
+  background-color: #80aaff;
   color: white;
   font-weight: bold;
   padding: 1rem 1rem;
   border: none;
   border-radius: 6px;
-  font-size: 20px;
+  font-size: clamp(0.625rem, 5vw, 1.125rem);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
@@ -289,45 +297,46 @@ button:hover {
 .bestyrelseWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .contactCard {
-  box-sizing: border-box;
-  max-width: 345px;
-  padding: 2rem;
+  max-width: 21.563rem;
+  width: 100%;
+  margin: 0 auto;
+  word-break: break-word;
 }
 
 .contactCard img {
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 .contactCard h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: var(--text);
 }
 
 
+
+
 article {
-  width: 60ch;
+  max-width: 95ch;
 }
 article * {
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
-
-
-
-
 
 /* footer */
 footer {
-  padding: 2rem 5rem 2rem 5rem;
-  background-color: #1E1E1E;
-  color: #FFFFFF;
+  padding: 2rem clamp(1rem, 5vw, 5rem);
+  background-color: #1e1e1e;
+  color: #ffffff;
   font-weight: 600;
+  /* width: 100%; */
 }
 
 .footer-top {
@@ -343,19 +352,21 @@ footer {
   align-items: center;
   gap: 2rem;
   flex: 1;
+  flex-wrap: wrap;
 }
 
 .footer-left p {
   line-height: 1.5;
 }
 .footer-left img {
-  width: 142px;
+  width: 8.875rem;
   height: auto;
 }
 
 .footer-right {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .footer-right i {
@@ -363,27 +374,24 @@ footer {
   cursor: pointer;
 }
 
-
 .footer-bottom {
   text-align: center;
-  
 }
 
 /* googlemaps */
 
 gmp-map {
-  height: 500px; 
+  height: 31.25rem;
   width: 100%;
 }
-
 
 /* Slider */
 
 .gallery {
   position: relative;
   width: 100%;
-  max-width: 1000px; 
-  height: 400px; 
+  max-width: 62.5rem;
+  height: 25rem;
   margin: auto;
   overflow: hidden;
 }
@@ -398,8 +406,8 @@ gmp-map {
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 31.25rem;
+  max-height: 31.25rem;
   transform: translate(-50%, -50%) scale(0.8);
   transition: transform 0.2s ease, opacity 0.9s ease;
   z-index: 1;
@@ -421,7 +429,6 @@ gmp-map {
   opacity: 0.7;
   transform: translate(50%, -50%) scale(0.6);
   z-index: 2;
-
 }
 
 .gallery-buttons {
@@ -430,40 +437,35 @@ gmp-map {
   text-align: center;
 }
 
-
-.quoteWrapper{
+.quoteWrapper {
   text-align: center;
   max-width: 40ch;
   margin: auto;
   color: var(--hoverCTA);
 }
 
-
 .recordWrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 8rem;
+  column-gap: 1rem;
   row-gap: 3rem;
   padding-top: 2rem;
-  width: max-content;
+  width: 100%;
   margin: auto;
 }
 
-
-
 .recordWrapper .record {
-  background-color: #80AAFF;
+  background-color: #80aaff;
   padding: 2rem;
-  max-width: 362px;
+  max-width: 22.625rem;
   border-radius: 8px;
   color: white;
-  
+  margin: 0 auto;
 }
 
 .recordWrapper .record h3 {
   color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 1rem;
 }
 
@@ -471,47 +473,47 @@ gmp-map {
   margin: auto;
   max-width: 80ch;
 }
-.godStilWrapper>* {
+.godStilWrapper > * {
   margin: 1rem;
   list-style-position: inside;
 }
 
-
-
 /* Kontigent */
 .prisWrapper {
-  background-color: #EAF1FF;
-  padding: 1rem 2rem;
+  background-color: #eaf1ff;
+  padding: clamp(1rem, 4vw, 2rem);
   border-radius: 2rem;
-  max-width: 953px;
+  width: 100%;
+  max-width: 59.563rem;
   margin: auto;
+  box-sizing: border-box;
 }
-
 
 .priser {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  width: max-content;
-  margin: auto;
+  width: 100%;
+  /* margin: auto; */
   gap: 4rem;
   margin-top: 2rem;
   list-style: inside;
+  padding: 0;
 }
 
 .priser p {
   text-align: center;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .prisInfo {
-  max-width: 570px; 
-  margin: 2rem auto; 
-  text-align: center; 
+  max-width: 35.625rem;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 .prisInfo button {
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .prisInfo * {
@@ -521,9 +523,6 @@ gmp-map {
 .prisInfo p:nth-of-type(2) {
   text-align: left;
 }
-
-
-
 
 /* Hold kort */
 
@@ -536,14 +535,12 @@ gmp-map {
 }
 
 .accordion {
-  display: none
+  display: none;
 }
-
-
 
 .holdCard {
   max-width: 100%;
-  background-color: #EAF1FF;
+  background-color: #eaf1ff;
   border-radius: 1rem;
   text-align: left;
   display: flex;
@@ -553,13 +550,12 @@ gmp-map {
 
 .holdCard img {
   width: 100%;
-  height: 400px;
+  height: 25rem;
   border-radius: 0.5rem;
   object-fit: cover;
   padding: 0;
   object-position: 50% 27%;
 }
-
 
 .infoItem {
   display: flex;
@@ -568,7 +564,6 @@ gmp-map {
   font-size: 1rem;
   color: var(--text);
   font-weight: bold;
-  
 }
 
 .icon {
@@ -579,14 +574,14 @@ gmp-map {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1rem;
 }
 
 .cardContent button {
-  max-width: 200px;
-  font-size: 16px;
+  max-width: 12.5rem;
+  font-size: 1rem;
 }
-
 
 .modalDialog {
   max-width: 100%;
@@ -612,7 +607,7 @@ gmp-map {
   top: 5px;
 }
 .modalContent {
-  padding: 5px 20px;
+  padding: 0.313rem 1.25rem;
   width: 50vw;
 }
 
@@ -621,7 +616,7 @@ gmp-map {
 }
 
 .modalContent h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   padding-bottom: 5px;
 }
 
@@ -630,13 +625,13 @@ gmp-map {
 }
 
 .modalButton {
-  background-color: #80AAFF;
+  background-color: #80aaff;
   color: white;
   font-weight: bold;
   padding: 1rem;
   border: none;
   border-radius: 6px;
-  font-size: 20px;
+  font-size: 1.25rem;
   float: right;
   text-decoration: none;
   margin-top: 2px;
@@ -646,14 +641,24 @@ dialog::backdrop {
   backdrop-filter: blur(2px);
 }
 
+
+
+.traening-button {
+  background-color: #80aaff;
+  color: white;
+  font-weight: bold;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(0.625rem, 5vw, 1.125rem);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
 /* Media */
 
-
 @media (max-width: 800px) {
-  main {
-    margin: 2rem;
-  }
-
   .wrapper,
   .wrapperCTA {
     flex-direction: column;
@@ -692,18 +697,13 @@ dialog::backdrop {
   }
 }
 
-
-@media (max-width: 600px) {
-  main {
-    margin: 1rem;
-  }
-
+@media (max-width: 768px) {
   .scroller {
     display: none;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 32px;
+  .nav-spacer {
+    height: 10rem;
   }
 
   .hamburger {
@@ -713,79 +713,80 @@ dialog::backdrop {
     right: 2px;
   }
 
-.hamburger input {
-  position: absolute;
-  cursor: pointer;
-  opacity: 0;
-  width: 40px;
-  z-index: 2;
-}
-.hamburger input:checked~.nav-links {
-  top: 100px;
-}
+  .hamburger input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 2.5rem;
+    z-index: 2;
+  }
+  .hamburger input:checked ~ .nav-links {
+    top: 100px;
+  }
 
-.hamburger span {
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background-color: var(--primaryBackground);
-  border-radius: 3px;
-  z-index: 1;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transform-origin: 4px 0px;
-}
-.hamburger input:checked~span {
-  opacity: 1;
-  transform: rotate(-45deg) translate(0, 0);
-  background: var(--primaryBackground);
-}
+  .hamburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--primaryBackground);
+    border-radius: 3px;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transform-origin: 4px 0px;
+  }
+  .hamburger input:checked ~ span {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, 0);
+    background: var(--primaryBackground);
+  }
 
-.hamburger input:checked~span:nth-last-child(3) {
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+  .hamburger input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
 
-.hamburger input:checked~span:nth-last-child(2) {
-  transform: rotate(45deg) translate(-8px, -10px);
-}
+  .hamburger input:checked ~ span:nth-last-child(2) {
+    transform: rotate(45deg) translate(-8px, -10px);
+  }
 
-.hamburger span:first-child {
-  transform-origin: 0% 0%;
-}
-.hamburger span:nth-last-child(2){
-  transform-origin: 0% 100%;
-}
-.dropdown input {
-  display: none;
-}
+  .hamburger span:first-child {
+    transform-origin: 0% 0%;
+  }
+  .hamburger span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  .dropdown input {
+    display: none;
+  }
 
-.dropdown-content {
-  display: none;
-  position: unset;
-  font-size: 20px;
-  justify-content: center;
-}
+  .dropdown-content {
+    display: none;
+    position: unset;
+    font-size: 1.25rem;
+    justify-content: center;
+  }
 
-.dropdown-content a {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-}
-.dropdown {
-  width: 100%;
-}
-.dropdown-toggle {
-  display: block;
-  width: 100%;
-  padding: 16px 0;
-  text-align: center;
-}
+  .dropdown-content a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .dropdown {
+    width: 100%;
+  }
+  .dropdown-toggle {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+  }
 
-#dropdown-toggle:checked+label+.dropdown-content {
-  display: flex;
-}
+  #dropdown-toggle:checked + label + .dropdown-content {
+    display: flex;
+  }
 
   .nav-links {
     position: fixed;
@@ -809,27 +810,27 @@ dialog::backdrop {
     padding: 16px;
     margin: 0 auto;
   }
-li:hover .dropdown-content {
-  display: block;
-  width: 100%;
-}
+  li:hover .dropdown-content {
+    display: block;
+    width: 100%;
+  }
 
-  .nav-links.active{
+  .nav-links.active {
     top: 100px;
   }
 
   .gallery {
     max-width: 100%;
-    height: 220px;
+    height: 13.75rem;
   }
 
   .gallery-item {
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 11.25rem;
+    max-height: 11.25rem;
   }
 
   .footer-left img {
-    width: 100px;
+    width: 11.25rem;
   }
 
   .footer-right i {
@@ -842,7 +843,7 @@ li:hover .dropdown-content {
 
   .bestyrelseWrapper .contactCard {
     align-items: center;
-    margin: 0 auto;
+  
   }
 
   .prisWrapper {
@@ -864,29 +865,25 @@ li:hover .dropdown-content {
   .openDialogBtn {
     display: none;
   }
-  .accordion{
+  .accordion {
     display: block;
   }
-    .accordion summary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      list-style: none;
-      font-size: 50px;
-      rotate: 90deg;
+  .accordion summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    list-style: none;
+    font-size: 3.125rem;
+    rotate: 90deg;
+  }
 
-    }
-  
-    .accordion[open] .accordion-arrow {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease;
-    }
-  
-    .accordion-arrow {
-      transition: transform 0.3s ease;
-    }
+  .accordion[open] .accordion-arrow {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
 
-  
-  
+  .accordion-arrow {
+    transition: transform 0.3s ease;
+  }
 }
